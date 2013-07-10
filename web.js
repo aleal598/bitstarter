@@ -1,7 +1,9 @@
+#!/usr/bin/env node
 var express = require('express');
 var fs= required('fs');
 var app = express.createServer(express.logger());
-fs.readFileSync('./index.html', function (err, data) {
+var data= new Buffer(128)
+fs.readFileSync('index.html', function (err, data) {
     if (err) throw err;
     console.log(data);
 });
