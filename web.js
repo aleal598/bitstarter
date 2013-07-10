@@ -4,7 +4,7 @@ var express = require('express');
 var app = express.createServer(express.logger());
 
 var data= new Buffer(228);
-data=fs.readFileSync('bitstarter wireframe/index.html');
+data=fs.readFileSync('index.html');
 app.get('/', function(request, response) {
 response.send(data.toString('utf8'));
 });
