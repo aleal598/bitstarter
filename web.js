@@ -2,7 +2,7 @@
 var express = require('express');
 var fs= required('fs');
 var app = express.createServer(express.logger());
-var data= new Buffer(128)
+var data= new Buffer(128);
 fs.readFileSync('index.html', function (err, data) {
     if (err) throw err;
     console.log(data);
